@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FAFCFF"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.RegistrationFragment"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/sarlavha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Ro'yhatdan o'tish"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/image_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sarlavha"
+        app:layout_constraintVertical_bias="0.03">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/circle_back"
+            android:padding="10dp"
+            android:src="@drawable/cursing" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/addd"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            app:srcCompat="@drawable/plus" />
+    </FrameLayout>
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.07"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/edit_text_bacground"
+        android:elevation="1dp"
+        android:hint="Ism, familiya"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@id/tel_raqam"
+        app:layout_constraintTop_toBottomOf="@id/image_logo" />
+
+    <EditText
+        android:id="@+id/tel_raqam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/edit_text_bacground"
+        android:elevation="1dp"
+        android:hint="Telefon raqami"
+        android:inputType="phone"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@id/davlat"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+
+        <Spinner
+            android:id="@+id/davlat"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginHorizontal="30sp"
+            android:background="@drawable/edit_text_bacground"
+            android:elevation="1dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@id/address"
+            app:layout_constraintTop_toBottomOf="@id/tel_raqam" />
+
+
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.07"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/edit_text_bacground"
+        android:elevation="1dp"
+        android:hint="Manzil"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@id/parol"
+        app:layout_constraintTop_toBottomOf="@id/davlat" />
+
+    <EditText
+        android:id="@+id/parol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/edit_text_bacground"
+        android:elevation="1dp"
+        android:hint="Parol"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/address" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reg_otish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/btn_bg"
+        android:paddingVertical="20dp"
+        android:text="Ro’yxatdan o’tish"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/version"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Version 1.0"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reg_otish" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginStart="18sp"-->
+<!--        android:layout_marginEnd="18sp"-->
+<!--        android:background="@drawable/edit_text"-->
+<!--        android:hint="Ism familiya"-->
+<!--        android:paddingStart="12dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image_logo"-->
+<!--        app:layout_constraintVertical_bias="0.05" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/tel_raqam"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginStart="18sp"-->
+<!--        android:layout_marginEnd="18sp"-->
+<!--        android:background="@drawable/edit_text"-->
+<!--        android:hint="Telefon raqam"-->
+<!--        android:inputType="phone"-->
+<!--        android:paddingStart="12dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/name"-->
+<!--        app:layout_constraintVertical_bias="0.03" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/davlat"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginStart="18dp"-->
+<!--        android:layout_marginEnd="18dp"-->
+<!--        android:background="@drawable/edit_text"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tel_raqam"-->
+<!--        app:layout_constraintVertical_bias="0.05" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/address"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginStart="18sp"-->
+<!--        android:layout_marginEnd="18sp"-->
+<!--        android:background="@drawable/edit_text"-->
+<!--        android:hint="Manzil"-->
+<!--        android:paddingStart="12dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/davlat"-->
+<!--        app:layout_constraintVertical_bias="0.08" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/parol"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginStart="18sp"-->
+<!--        android:layout_marginEnd="18sp"-->
+<!--        android:background="@drawable/edit_text"-->
+<!--        android:hint="Parol"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:paddingStart="12dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/address"-->
+<!--        app:layout_constraintVertical_bias="0.11" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/reg_otish"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:backgroundTint="#166BFA"-->
+<!--        android:text="Ro'yhatdan o'tish"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textSize="16sp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/parol"-->
+<!--        app:layout_constraintVertical_bias="0.5"-->
+<!--        tools:layout_editor_absoluteX="18dp" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Version 1.0"-->
+<!--        android:textSize="17sp"-->
+<!--        android:textStyle="normal"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/reg_otish"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
